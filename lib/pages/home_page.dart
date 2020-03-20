@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:room_booking/i18n/app_localization.dart';
+import 'package:room_booking/pages/drawer_menu.dart';
 
 import 'camera_route.dart';
 
@@ -14,33 +15,11 @@ class _HomePage extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Room Booking'),
+        backgroundColor: Colors.teal,
       ),
+      drawer: DrawerMenu(),
       body: Column(
         children: <Widget>[
-          Row(
-            children: <Widget>[
-              Expanded(
-                child: ListTile(
-                  leading: RaisedButton(
-                    onPressed: () {
-                      setState(() {
-                        AppLocalization.load(Locale('en', 'US'));
-                      });
-                    },
-                    child: Text('ENGLISH'),
-                  ),
-                  trailing: RaisedButton(
-                    onPressed: () {
-                      setState(() {
-                        AppLocalization.load(Locale('fr', 'FR'));
-                      });
-                    },
-                    child: Text('FRENCH'),
-                  ),
-                ),
-              ),
-            ],
-          ),
           Expanded(
             child: Center(
               child: Text(AppLocalization.of(context).title),
@@ -53,7 +32,7 @@ class _HomePage extends State<HomePage> {
                 child: Text(AppLocalization.of(context).cameraRouteTitle),
                 onPressed: () {
                   Navigator.of(context).push(
-                      MaterialPageRoute(builder: (context) => CameraRoute()));
+                    MaterialPageRoute(builder: (context) => CameraRoute()));
                 },
               ),
             ),

@@ -20,6 +20,30 @@ class AppLocalization {
     return Localizations.of<AppLocalization>(context, AppLocalization);
   }
 
+  String get french {
+    return Intl.message(
+      'French',
+      name: 'french',
+      desc: 'Label for French language',
+    );
+  }
+
+  String get english {
+    return Intl.message(
+      'English',
+      name: 'english',
+      desc: 'Label for English language',
+    );
+  }
+
+  String get menuTitle {
+    return Intl.message(
+      'Menu',
+      name: 'menuTitle',
+      desc: 'Title of the menu, appearing when opening the drawer menu',
+    );
+  }
+
   String get title {
     return Intl.message(
       'Hello Boy',

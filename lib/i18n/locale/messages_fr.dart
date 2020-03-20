@@ -21,6 +21,11 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
-    "title" : MessageLookupByLibrary.simpleMessage("Bonjour Monde")
+    "cameraRouteTitle" : MessageLookupByLibrary.simpleMessage("Caméra"),
+    "english" : MessageLookupByLibrary.simpleMessage("English"),
+    "french" : MessageLookupByLibrary.simpleMessage("Français"),
+    "menuTitle" : MessageLookupByLibrary.simpleMessage("Menu"),
+    "savePhotoConfirmation" : MessageLookupByLibrary.simpleMessage("Photo sauvegardée dans la gallerie"),
+    "title" : MessageLookupByLibrary.simpleMessage("Bonjour Monde!!")
   };
 }

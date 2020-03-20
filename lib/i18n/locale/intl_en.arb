@@ -1,17 +1,35 @@
 {
   "@@last_modified": "2020-02-18T14:37:51.601733",
+  "french": "Français",
+  "@french": {
+    "description": "Label for French language",
+    "type": "text",
+    "placeholders": {}
+  },
+  "english": "English",
+  "@english": {
+    "description": "Label for English language",
+    "type": "text",
+    "placeholders": {}
+  },
+  "menuTitle": "Menu",
+  "@menuTitle": {
+    "description": "Title of the menu, appearing when opening the drawer menu",
+    "type": "text",
+    "placeholders": {}
+  },
   "title": "Hello World",
   "@title": {
     "description": "Title for the Demo application",
     "type": "text",
     "placeholders": {}
-  }
+  },
   "cameraRouteTitle": "Camera",
   "@cameraRouteTitle": {
     "description": "Title for camera route",
     "type": "text",
     "placeholders": {}
-  }
+  },
   "savePhotoConfirmation": "Photo has been saved in the gallery",
   "@savePhotoConfirmation": {
     "description": "Message in the snackbar when the user takes a photo and it's actually saved in the gallery",
