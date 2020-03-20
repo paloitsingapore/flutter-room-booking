@@ -2,11 +2,34 @@ import 'package:flutter/material.dart';
 import 'package:room_booking/i18n/app_localization.dart';
 
 class DrawerMenu extends StatefulWidget {
+  final Function notifyParent;
+
+  DrawerMenu(this.notifyParent);
+
   @override
   State<StatefulWidget> createState() => _DrawerMenu();
 }
 
 class _DrawerMenu extends State<DrawerMenu> {
+  setLocale(Locale locale) {
+    setState(() {
+      AppLocalization.load(locale);
+      this.widget.notifyParent();
+    });
+  }
+
+  Widget languageOption(String label, String languageCode, String countryCode) {
+    return ListTile(
+      title: Text(
+        label,
+      ),
+      onTap: () {
+        this.setLocale(Locale(languageCode, countryCode));
+        Navigator.pop(context);
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -24,24 +47,8 @@ class _DrawerMenu extends State<DrawerMenu> {
               color: Colors.teal,
             ),
           ),
-          ListTile(
-            title: Text(AppLocalization.of(context).french),
-            onTap: () {
-              setState(() {
-                AppLocalization.load(Locale('fr', 'FR'));
-              });
-              Navigator.pop(context);
-            },
-          ),
-          ListTile(
-            title: Text(AppLocalization.of(context).english),
-            onTap: () {
-              setState(() {
-                AppLocalization.load(Locale('en', 'US'));
-              });
-              Navigator.pop(context);
-            },
-          )
+          languageOption(AppLocalization.of(context).french, 'fr', 'FR'),
+          languageOption(AppLocalization.of(context).english, 'en', 'US'),
         ],
       ),
     );
