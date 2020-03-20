@@ -1,0 +1,21 @@
+{
+  "@@last_modified": "2020-02-18T14:37:51.601733",
+  "title": "Hello World",
+  "@title": {
+    "description": "Title for the Demo application",
+    "type": "text",
+    "placeholders": {}
+  }
+  "cameraRouteTitle": "Camera",
+  "@cameraRouteTitle": {
+    "description": "Title for camera route",
+    "type": "text",
+    "placeholders": {}
+  }
+  "savePhotoConfirmation": "Photo has been saved in the gallery",
+  "@savePhotoConfirmation": {
+    "description": "Message in the snackbar when the user takes a photo and it's actually saved in the gallery",
+    "type": "text",
+    "placeholders": {}
+  }
+}

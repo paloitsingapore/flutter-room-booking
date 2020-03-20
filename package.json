@@ -1,0 +1,10 @@
+{
+  "name": "room_booking",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "to-arb": "flutter pub run intl_translation:extract_to_arb --output-dir=lib/i18n/locale lib/i18n/app_localization.dart",
+    "from-arb": "flutter pub run intl_translation:generate_from_arb --output-dir=lib/i18n/locale --no-use-deferred-loading lib/i18n/locale/intl_messages.arb lib/i18n/locale/intl_fr.arb lib/i18n/locale/intl_en.arb lib/i18n/app_localization.dart"
+  }
+}
